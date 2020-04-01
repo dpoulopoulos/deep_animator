@@ -3,6 +3,9 @@
 __all__ = ['DenseMotionNetwork']
 
 # Cell
+import torch
+import torch.nn.functional as F
+
 from torch import nn
 
 from .utils import Hourglass, AntiAliasInterpolation2d, kp2gaussian, make_coordinate_grid

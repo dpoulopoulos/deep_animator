@@ -5,10 +5,14 @@ __all__ = ['deep_animate']
 # Cell
 import imageio
 
+from skimage import img_as_ubyte
 from skimage.transform import resize
 from fastscript import call_parse, Param
 
 from .utils import load_checkpoints, animate
+
+import warnings
+warnings.filterwarnings("ignore")
 
 # Cell
 @call_parse
@@ -16,6 +20,7 @@ def deep_animate(source: Param('Path to the source image.', str),
                  driving: Param('Path to the driving video.', str),
                  config: Param('Path to configuration file.', str),
                  checkpoint: Param('Path to model.', str),
+                 device: Param('cpu or gpu accelaration', str) = 'cpu',
                  dest: Param('Path to save the generated video.', str) = 'generated_video.mp4',
                  relative: Param('Relative.', bool) = True,
                  adapt_movement_scale: Param('Adaptive moment scale.', bool) = True):

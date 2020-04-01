@@ -25,6 +25,7 @@ index = {"SynchronizedBatchNorm2d": "batchnorm.ipynb",
          "execute_replication_callbacks": "replicate.ipynb",
          "DataParallelWithCallback": "replicate.ipynb",
          "load_checkpoints": "utils.ipynb",
+         "normalize_kp": "utils.ipynb",
          "animate": "utils.ipynb"}
 
 modules = ["sync_batchnorm/batchnorm.py",

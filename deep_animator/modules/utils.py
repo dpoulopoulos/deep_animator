@@ -186,7 +186,7 @@ def kp2gaussian(kp, spatial_size, kp_variance):
     return out
 
 # Cell
-def gaussian2kp(self, heatmap):
+def gaussian2kp(heatmap):
     """ Extract the mean from a heatmap."""
     shape = heatmap.shape
     heatmap = heatmap.unsqueeze(-1)

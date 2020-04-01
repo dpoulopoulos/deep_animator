@@ -50,7 +50,7 @@ class KPDetector(nn.Module):
         heatmap = F.softmax(heatmap / self.temperature, dim=2)
         heatmap = heatmap.view(*final_shape)
 
-        out = self.gaussian2kp(heatmap)
+        out = gaussian2kp(heatmap)
 
         if self.jacobian is not None:
             jacobian_map = self.jacobian(feature_map)

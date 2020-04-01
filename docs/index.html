@@ -1,12 +1,12 @@
 ---
 
-title: Project name here
+title: Deep Animator
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Summary description here."
-description: "Summary description here."
+summary: "Image animation given a driving video sequence and a source image."
+description: "Image animation given a driving video sequence and a source image."
 ---
 <!--
 
@@ -29,7 +29,8 @@ description: "Summary description here."
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This file will become your README and also the index of your documentation.</p>
+<p>Deep Animator is an implementation of <a href="https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation">First Order Motion Model for Image Animation</a> by <a href="https://github.com/AliaksandrSiarohin">Aliaksandr Siarohin</a>, <a href="http://stelat.eu/">Stéphane Lathuilière</a>, <a href="http://www.stulyakov.com/">Sergey Tulyakov</a>, <a href="http://elisaricci.eu/">Elisa Ricci</a> and <a href="http://disi.unitn.it/~sebe/">Nicu Sebe</a>.</p>
+<p>The source code can be found <a href="https://github.com/AliaksandrSiarohin/first-order-model">here</a>. <strong>This library is a simple transformation of the original code into a shell script for quick experimentation</strong>. This is also an educational effort for the writer.</p>
 
 </div>
 </div>
@@ -42,7 +43,7 @@ description: "Summary description here."
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install your_project_name</code></p>
+<p>Run <code>pip install deep_animator</code> to install the library in your environment.</p>
 
 </div>
 </div>
@@ -55,44 +56,46 @@ description: "Summary description here."
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Fill me in please! Don't forget code examples:</p>
+<p>First you need to download the weights of the model <a href="https://drive.google.com/file/d/1zqa0la8FKchq62gRJMMvDGVhinf3nBEx/view?usp=sharing">here</a>. Then just run the following command.</p>
+<p><code>deep_animate &lt;path_to_the_source_image&gt; &lt;path_to_the_driving_video&gt; &lt;path_to_yaml_conf&gt; &lt;path_to_model_weights&gt;</code></p>
+<ul>
+<li>Example of source image <a href="https://drive.google.com/file/d/1ACSKOfQUHbSEWmPu4Ndss7bkrPVK5WBR/view?usp=sharing">here</a></li>
+<li>Example of driving video <a href="https://drive.google.com/file/d/103PEtO2QO45XwCNLYIzMcW3aRdbOhS1D/view?usp=sharing">here</a></li>
+</ul>
+<p>An example YAML file is given below:</p>
+
+<pre><code>model_params:
+  common_params:
+    num_kp: 10
+    num_channels: 3
+    estimate_jacobian: True
+  kp_detector_params:
+     temperature: 0.1
+     block_expansion: 32
+     max_features: 1024
+     scale_factor: 0.25
+     num_blocks: 5
+  generator_params:
+    block_expansion: 64
+    max_features: 512
+    num_down_blocks: 2
+    num_bottleneck_blocks: 6
+    estimate_occlusion_map: True
+    dense_motion_params:
+      block_expansion: 64
+      max_features: 1024
+      num_blocks: 5
+      scale_factor: 0.25
+  discriminator_params:
+    scales: [1]
+    block_expansion: 32
+    max_features: 512
+    num_blocks: 4
+    sn: True</code></pre>
 
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 </div>
  
 
