@@ -19,6 +19,7 @@ index = {"DenseMotionNetwork": "modules_dense_motion.ipynb",
          "CallbackContext": "replicate.ipynb",
          "execute_replication_callbacks": "replicate.ipynb",
          "DataParallelWithCallback": "replicate.ipynb",
+         "deep_animate": "run.ipynb",
          "load_checkpoints": "utils.ipynb",
          "animate": "utils.ipynb"}
 
@@ -27,6 +28,7 @@ modules = ["modules/dense_motion.py",
            "modules/kp_detector.py",
            "modules/utils.py",
            "sync_batchnorm/replicate.py",
+           "run.py",
            "utils.py"]
 
 doc_url = "https://dpoulopoulos.github.io/deep_animator/"

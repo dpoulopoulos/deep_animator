@@ -25,6 +25,9 @@ entries:
       title: Replicate
       url: /replicate
     - output: web,pdf
+      title: Run
+      url: /run
+    - output: web,pdf
       title: Utils
       url: /utils
     output: web
