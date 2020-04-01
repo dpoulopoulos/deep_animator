@@ -10,6 +10,9 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
+      title: CLI
+      url: /cli
+    - output: web,pdf
       title: Dense Motion
       url: /modules_dense_motion
     - output: web,pdf
@@ -24,9 +27,6 @@ entries:
     - output: web,pdf
       title: Replicate
       url: /replicate
-    - output: web,pdf
-      title: Run
-      url: /run
     - output: web,pdf
       title: Utils
       url: /utils
