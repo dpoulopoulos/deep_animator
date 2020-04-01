@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"DownBlock2d": "modules_utils.ipynb",
+index = {"DenseMotionNetwork": "modules_dense_motion.ipynb",
+         "DownBlock2d": "modules_utils.ipynb",
          "UpBlock2d": "modules_utils.ipynb",
          "Encoder": "modules_utils.ipynb",
          "Decoder": "modules_utils.ipynb",
