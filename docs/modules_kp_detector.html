@@ -37,67 +37,29 @@ description: "Network architecture for the keypoint detector."
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># class KPDetector(nn.Module):</span>
-<span class="c1">#     &quot;&quot;&quot;Detects main keypoints. Return keypoint position and jacobian near each keypoint.&quot;&quot;&quot;</span>
-<span class="c1">#     def __init__(self, block_expansion, num_kp, num_channels, max_features,</span>
-<span class="c1">#                  num_blocks, temperature, estimate_jacobian=False, scale_factor=1,</span>
-<span class="c1">#                  single_jacobian_map=False, pad=0):</span>
-<span class="c1">#         super(KPDetector, self).__init__()</span>
+</div>
+    {% endraw %}
 
-<span class="c1">#         self.predictor = Hourglass(block_expansion, in_features=num_channels,</span>
-<span class="c1">#                                    max_features=max_features, num_blocks=num_blocks)</span>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
-<span class="c1">#         self.kp = nn.Conv2d(in_channels=self.predictor.out_filters, out_channels=num_kp, kernel_size=(7, 7),</span>
-<span class="c1">#                             padding=pad)</span>
+<div class="output_wrapper">
+<div class="output">
 
-<span class="c1">#         if estimate_jacobian:</span>
-<span class="c1">#             self.num_jacobian_maps = 1 if single_jacobian_map else num_kp</span>
-<span class="c1">#             self.jacobian = nn.Conv2d(in_channels=self.predictor.out_filters,</span>
-<span class="c1">#                                       out_channels=4 * self.num_jacobian_maps, kernel_size=(7, 7), padding=pad)</span>
-<span class="c1">#             self.jacobian.weight.data.zero_()</span>
-<span class="c1">#             self.jacobian.bias.data.copy_(torch.tensor([1, 0, 0, 1] * self.num_jacobian_maps, dtype=torch.float))</span>
-<span class="c1">#         else:</span>
-<span class="c1">#             self.jacobian = None</span>
+<div class="output_area">
 
-<span class="c1">#         self.temperature = temperature</span>
-<span class="c1">#         self.scale_factor = scale_factor</span>
-<span class="c1">#         if self.scale_factor != 1:</span>
-<span class="c1">#             self.down = AntiAliasInterpolation2d(num_channels, self.scale_factor)</span>
 
-<span class="c1">#     def forward(self, x):</span>
-<span class="c1">#         if self.scale_factor != 1:</span>
-<span class="c1">#             x = self.down(x)</span>
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="KPDetector" class="doc_header"><code>class</code> <code>KPDetector</code><a href="https://github.com/dpoulopoulos/deep_animator/tree/master/deep_animator/modules/kp_detector.py#L14" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>KPDetector</code>(<strong><code>block_expansion</code></strong>, <strong><code>num_kp</code></strong>, <strong><code>num_channels</code></strong>, <strong><code>max_features</code></strong>, <strong><code>num_blocks</code></strong>, <strong><code>temperature</code></strong>, <strong><code>estimate_jacobian</code></strong>=<em><code>False</code></em>, <strong><code>scale_factor</code></strong>=<em><code>1</code></em>, <strong><code>single_jacobian_map</code></strong>=<em><code>False</code></em>, <strong><code>pad</code></strong>=<em><code>0</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Detects main keypoints. Return keypoint position and jacobian near each keypoint.</p>
 
-<span class="c1">#         feature_map = self.predictor(x)</span>
-<span class="c1">#         prediction = self.kp(feature_map)</span>
+</div>
 
-<span class="c1">#         final_shape = prediction.shape</span>
-<span class="c1">#         heatmap = prediction.view(final_shape[0], final_shape[1], -1)</span>
-<span class="c1">#         heatmap = F.softmax(heatmap / self.temperature, dim=2)</span>
-<span class="c1">#         heatmap = heatmap.view(*final_shape)</span>
+</div>
 
-<span class="c1">#         out = self.gaussian2kp(heatmap)</span>
-
-<span class="c1">#         if self.jacobian is not None:</span>
-<span class="c1">#             jacobian_map = self.jacobian(feature_map)</span>
-<span class="c1">#             jacobian_map = jacobian_map.reshape(final_shape[0], self.num_jacobian_maps, 4, final_shape[2],</span>
-<span class="c1">#                                                 final_shape[3])</span>
-<span class="c1">#             heatmap = heatmap.unsqueeze(2)</span>
-
-<span class="c1">#             jacobian = heatmap * jacobian_map</span>
-<span class="c1">#             jacobian = jacobian.view(final_shape[0], final_shape[1], 4, -1)</span>
-<span class="c1">#             jacobian = jacobian.sum(dim=-1)</span>
-<span class="c1">#             jacobian = jacobian.view(jacobian.shape[0], jacobian.shape[1], 2, 2)</span>
-<span class="c1">#             out[&#39;jacobian&#39;] = jacobian</span>
-
-<span class="c1">#         return out</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
