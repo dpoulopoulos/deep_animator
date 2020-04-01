@@ -3,7 +3,7 @@
 __all__ = []
 
 # Cell
-
+from .utils import Hourglass
 
 # Cell
 # class DenseMotionNetwork(nn.Module):
