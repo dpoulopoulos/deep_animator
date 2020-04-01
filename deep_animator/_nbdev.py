@@ -2,7 +2,11 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"deep_animate": "cli.ipynb",
+index = {"SynchronizedBatchNorm2d": "batchnorm.ipynb",
+         "deep_animate": "cli.ipynb",
+         "FutureResult": "comm.ipynb",
+         "SlavePipe": "comm.ipynb",
+         "SyncMaster": "comm.ipynb",
          "DenseMotionNetwork": "modules_dense_motion.ipynb",
          "OcclusionAwareGenerator": "modules_generator.ipynb",
          "KPDetector": "modules_kp_detector.ipynb",
@@ -23,7 +27,9 @@ index = {"deep_animate": "cli.ipynb",
          "load_checkpoints": "utils.ipynb",
          "animate": "utils.ipynb"}
 
-modules = ["cli.py",
+modules = ["sync_batchnorm/batchnorm.py",
+           "cli.py",
+           "sync_batchnorm/comm.py",
            "modules/dense_motion.py",
            "modules/generator.py",
            "modules/kp_detector.py",

@@ -10,8 +10,14 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
+      title: Batchnorm
+      url: /batchnorm
+    - output: web,pdf
       title: CLI
       url: /cli
+    - output: web,pdf
+      title: Comm
+      url: /comm
     - output: web,pdf
       title: Dense Motion
       url: /modules_dense_motion

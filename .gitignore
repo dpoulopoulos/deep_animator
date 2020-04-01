@@ -9,6 +9,8 @@
 _tmp*
 tmp*
 tags
+examples
+artefacts
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

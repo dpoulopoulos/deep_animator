@@ -9,6 +9,8 @@ import torch.nn.functional as F
 
 from torch import nn
 
+from ..sync_batchnorm.batchnorm import SynchronizedBatchNorm2d as BatchNorm2d
+
 # Cell
 class DownBlock2d(nn.Module):
     """Downsampling block for use in encoder."""
