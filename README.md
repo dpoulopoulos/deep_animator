@@ -8,7 +8,7 @@ The source code can be found [here](https://github.com/AliaksandrSiarohin/first-
 
 ## Install
 
-Run `pip install deep_animator` to install the library in your environment.
+Run `pip install deep-animator` to install the library in your environment.
 
 ## How to use
 
