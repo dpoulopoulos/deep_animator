@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"DenseMotionNetwork": "modules_dense_motion.ipynb",
+         "OcclusionAwareGenerator": "modules_generator.ipynb",
          "DownBlock2d": "modules_utils.ipynb",
          "UpBlock2d": "modules_utils.ipynb",
          "Encoder": "modules_utils.ipynb",
