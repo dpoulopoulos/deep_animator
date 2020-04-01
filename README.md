@@ -1,10 +1,12 @@
+![CI](https://github.com/dpoulopoulos/deep_animator/workflows/CI/badge.svg)
+
 # Deep Animator
 > Image animation given a driving video sequence and a source image.
 
 
 Deep Animator is an implementation of [First Order Motion Model for Image Animation](https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation) by [Aliaksandr Siarohin](https://github.com/AliaksandrSiarohin), [Stéphane Lathuilière](http://stelat.eu/), [Sergey Tulyakov](http://www.stulyakov.com/), [Elisa Ricci](http://elisaricci.eu/) and [Nicu Sebe](http://disi.unitn.it/~sebe/). 
 
-The source code can be found [here](https://github.com/AliaksandrSiarohin/first-order-model). **This library is a simple transformation of the original code into a shell script for quick experimentation**. This is also an educational effort for the writer. 
+**The source code can be found [here](https://github.com/AliaksandrSiarohin/first-order-model). This library is a simple transformation of the original code into a shell script for quick experimentation**. This is also an educational effort for the writer. 
 
 ## Install
 
