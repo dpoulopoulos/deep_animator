@@ -10,8 +10,17 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: module name here
-      url: /core
+      title: Dense Motion
+      url: /modules_dense_motion
+    - output: web,pdf
+      title: Generator
+      url: /modules_generator
+    - output: web,pdf
+      title: Module Utils
+      url: /modules_utils
+    - output: web,pdf
+      title: Utils
+      url: /utils
     output: web
     title: deep_animator
   output: web

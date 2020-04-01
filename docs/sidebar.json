@@ -1,6 +1,9 @@
 {
   "deep_animator": {
     "Overview": "/",
-    "module name here": "/core"
+    "Dense Motion": "/modules_dense_motion",
+    "Generator": "/modules_generator",
+    "Module Utils": "/modules_utils",
+    "Utils": "/utils"
   }
 }

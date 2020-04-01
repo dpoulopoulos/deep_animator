@@ -2,9 +2,17 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"DownBlock2d": "modules_utils.ipynb",
+         "UpBlock2d": "modules_utils.ipynb",
+         "Encoder": "modules_utils.ipynb",
+         "Decoder": "modules_utils.ipynb",
+         "Hourglass": "modules_utils.ipynb",
+         "load_checkpoints": "utils.ipynb"}
 
-modules = []
+modules = ["modules/dense_motion.py",
+           "modules/generator.py",
+           "modules/utils.py",
+           "utils.py"]
 
 doc_url = "https://dpoulopoulos.github.io/deep_animator/"
 
