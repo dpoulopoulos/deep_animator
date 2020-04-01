@@ -16,6 +16,9 @@ entries:
       title: Generator
       url: /modules_generator
     - output: web,pdf
+      title: Keypoint Detector
+      url: /modules_kp_detector
+    - output: web,pdf
       title: Module Utils
       url: /modules_utils
     - output: web,pdf

@@ -3,6 +3,7 @@
     "Overview": "/",
     "Dense Motion": "/modules_dense_motion",
     "Generator": "/modules_generator",
+    "Keypoint Detector": "/modules_kp_detector",
     "Module Utils": "/modules_utils",
     "Utils": "/utils"
   }

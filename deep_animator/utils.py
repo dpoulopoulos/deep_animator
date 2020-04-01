@@ -9,6 +9,8 @@ import torch.nn as nn
 
 from typing import Tuple
 
+from .modules.generator import OcclusionAwareGenerator
+
 # Cell
 def load_checkpoints(config_path: str, checkpoint_path: str, device: str = 'cpu') \
                      -> Tuple[torch.nn.Module, torch.nn.Module]:
@@ -22,7 +24,7 @@ def load_checkpoints(config_path: str, checkpoint_path: str, device: str = 'cpu'
 
 #     kp_detector = KPDetector(**config['model_params']['kp_detector_params'],
 #                              **config['model_params']['common_params'])
-#     kp_detector.cuda()
+#     kp_detector.to(device)
 
 #     checkpoint = torch.load(checkpoint_path)
 #     generator.load_state_dict(checkpoint['generator'])

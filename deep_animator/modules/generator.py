@@ -4,7 +4,9 @@ __all__ = ['OcclusionAwareGenerator']
 
 # Cell
 import torch
-import torch.nn as nn
+import torch.nn.functional as F
+
+from torch import nn
 
 from .dense_motion import DenseMotionNetwork
 from .utils import SameBlock2d, DownBlock2d, UpBlock2d, ResBlock2d
