@@ -6,6 +6,8 @@ __all__ = []
 import torch
 import torch.nn as nn
 
+from .dense_motion import DenseMotionNetwork
+
 # Cell
 # class OcclusionAwareGenerator(nn.Module):
 #     """
