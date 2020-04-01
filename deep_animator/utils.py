@@ -10,6 +10,7 @@ import torch.nn as nn
 from typing import Tuple
 
 from .modules.generator import OcclusionAwareGenerator
+from .sync_batchnorm.replicate import DataParallelWithCallback
 
 # Cell
 def load_checkpoints(config_path: str, checkpoint_path: str, device: str = 'cpu') \
@@ -22,18 +23,18 @@ def load_checkpoints(config_path: str, checkpoint_path: str, device: str = 'cpu'
                                         **config['model_params']['common_params'])
     generator.to(device)
 
-#     kp_detector = KPDetector(**config['model_params']['kp_detector_params'],
-#                              **config['model_params']['common_params'])
-#     kp_detector.to(device)
+    kp_detector = KPDetector(**config['model_params']['kp_detector_params'],
+                             **config['model_params']['common_params'])
+    kp_detector.to(device)
 
-#     checkpoint = torch.load(checkpoint_path)
-#     generator.load_state_dict(checkpoint['generator'])
-#     kp_detector.load_state_dict(checkpoint['kp_detector'])
+    checkpoint = torch.load(checkpoint_path)
+    generator.load_state_dict(checkpoint['generator'])
+    kp_detector.load_state_dict(checkpoint['kp_detector'])
 
-#     generator = DataParallelWithCallback(generator)
-#     kp_detector = DataParallelWithCallback(kp_detector)
+    generator = DataParallelWithCallback(generator)
+    kp_detector = DataParallelWithCallback(kp_detector)
 
-#     generator.eval()
-#     kp_detector.eval()
+    generator.eval()
+    kp_detector.eval()
 
-#     return generator, kp_detector
+    return generator, kp_detector

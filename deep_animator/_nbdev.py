@@ -16,12 +16,16 @@ index = {"DenseMotionNetwork": "modules_dense_motion.ipynb",
          "gaussian2kp": "modules_utils.ipynb",
          "SameBlock2d": "modules_utils.ipynb",
          "ResBlock2d": "modules_utils.ipynb",
+         "CallbackContext": "replicate.ipynb",
+         "execute_replication_callbacks": "replicate.ipynb",
+         "DataParallelWithCallback": "replicate.ipynb",
          "load_checkpoints": "utils.ipynb"}
 
 modules = ["modules/dense_motion.py",
            "modules/generator.py",
            "modules/kp_detector.py",
            "modules/utils.py",
+           "sync_batchnorm/replicate.py",
            "utils.py"]
 
 doc_url = "https://dpoulopoulos.github.io/deep_animator/"

@@ -5,6 +5,7 @@
     "Generator": "/modules_generator",
     "Keypoint Detector": "/modules_kp_detector",
     "Module Utils": "/modules_utils",
+    "Replicate": "/replicate",
     "Utils": "/utils"
   }
 }

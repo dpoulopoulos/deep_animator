@@ -22,6 +22,9 @@ entries:
       title: Module Utils
       url: /modules_utils
     - output: web,pdf
+      title: Replicate
+      url: /replicate
+    - output: web,pdf
       title: Utils
       url: /utils
     output: web
