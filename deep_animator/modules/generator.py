@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 
 from .dense_motion import DenseMotionNetwork
+from .utils import SameBlock2d
 
 # Cell
 # class OcclusionAwareGenerator(nn.Module):

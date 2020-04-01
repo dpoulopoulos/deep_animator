@@ -11,6 +11,8 @@ index = {"DenseMotionNetwork": "modules_dense_motion.ipynb",
          "AntiAliasInterpolation2d": "modules_utils.ipynb",
          "make_coordinate_grid": "modules_utils.ipynb",
          "kp2gaussian": "modules_utils.ipynb",
+         "SameBlock2d": "modules_utils.ipynb",
+         "ResBlock2d": "modules_utils.ipynb",
          "load_checkpoints": "utils.ipynb"}
 
 modules = ["modules/dense_motion.py",
