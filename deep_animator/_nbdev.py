@@ -19,7 +19,8 @@ index = {"DenseMotionNetwork": "modules_dense_motion.ipynb",
          "CallbackContext": "replicate.ipynb",
          "execute_replication_callbacks": "replicate.ipynb",
          "DataParallelWithCallback": "replicate.ipynb",
-         "load_checkpoints": "utils.ipynb"}
+         "load_checkpoints": "utils.ipynb",
+         "animate": "utils.ipynb"}
 
 modules = ["modules/dense_motion.py",
            "modules/generator.py",
