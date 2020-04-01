@@ -7,6 +7,9 @@ index = {"DownBlock2d": "modules_utils.ipynb",
          "Encoder": "modules_utils.ipynb",
          "Decoder": "modules_utils.ipynb",
          "Hourglass": "modules_utils.ipynb",
+         "AntiAliasInterpolation2d": "modules_utils.ipynb",
+         "make_coordinate_grid": "modules_utils.ipynb",
+         "kp2gaussian": "modules_utils.ipynb",
          "load_checkpoints": "utils.ipynb"}
 
 modules = ["modules/dense_motion.py",

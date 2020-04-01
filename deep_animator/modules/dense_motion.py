@@ -3,12 +3,13 @@
 __all__ = []
 
 # Cell
-from .utils import Hourglass
+from .utils import Hourglass, AntiAliasInterpolation2d
 
 # Cell
 # class DenseMotionNetwork(nn.Module):
 #     """
-#     Module that predicting a dense motion from sparse motion representation given by kp_source and kp_driving
+#     Module that predicting a dense motion from sparse motion representation
+#     given by kp_source and kp_driving.
 #     """
 
 #     def __init__(self, block_expansion, num_blocks, max_features, num_kp,
@@ -33,9 +34,7 @@ from .utils import Hourglass
 #             self.down = AntiAliasInterpolation2d(num_channels, self.scale_factor)
 
 #     def create_heatmap_representations(self, source_image, kp_driving, kp_source):
-#         """
-#         Eq 6. in the paper H_k(z)
-#         """
+#         """Eq 6. in the paper H_k(z)."""
 #         spatial_size = source_image.shape[2:]
 #         gaussian_driving = kp2gaussian(kp_driving, spatial_size=spatial_size, kp_variance=self.kp_variance)
 #         gaussian_source = kp2gaussian(kp_source, spatial_size=spatial_size, kp_variance=self.kp_variance)
