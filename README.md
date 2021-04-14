@@ -3,6 +3,7 @@
 # Deep Animator
 > Image animation given a driving video sequence and a source image.
 
+**This repository is no longer maintained, but is being kept around for educational purposes.**
 
 Deep Animator is an implementation of [First Order Motion Model for Image Animation](https://papers.nips.cc/paper/8935-first-order-motion-model-for-image-animation) by [Aliaksandr Siarohin](https://github.com/AliaksandrSiarohin), [Stéphane Lathuilière](http://stelat.eu/), [Sergey Tulyakov](http://www.stulyakov.com/), [Elisa Ricci](http://elisaricci.eu/) and [Nicu Sebe](http://disi.unitn.it/~sebe/). 
 
